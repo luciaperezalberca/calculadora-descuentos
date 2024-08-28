@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Descuentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>Calculadora de Descuentos</h1>
+        <div class="mainContent">
+                <form id="discountForm">
+                        <label for="courseValue">Valor del curso:</label>
+                        <input type="text" id="courseValue" name="courseValue" required>
+        
+                        <label for="paymentMethod">Medio de pago:</label>
+                        <select id="paymentMethod" name="paymentMethod">
+                                <option value="transferencia">Transferencia</option>
+                                <option value="tarjeta">Tarjeta</option>
+                        </select>
+        
+                        <label for="isStudent">¿Es alumno o hace mas de 1 curso?</label>
+                        <select id="isStudent" name="isStudent">
+                                <option value="no">No</option>
+                                <option value="si">Sí</option>
+                        </select>
+        
+                        <label for="numCourses">¿Cuántos cursos hace?</label>
+                        <select id="numCourses" name="numCourses">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 o más</option>
+                        </select>
+        
+                        <label for="numColleagues">¿Cuántos colegas vienen?</label>
+                        <select id="numColleagues" name="numColleagues">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 o más</option>
+                        </select>
+        
+                        <label for="hasJob">¿Tiene trabajo?</label>
+                        <select id="hasJob" name="hasJob">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                        </select>
+        
+                        <button type="button" onclick="calculateDiscount()">Calcular Valor Final</button>
+                </form>
+        
+                <div class="boxResult">
+                        <div class="result" id="result"></div>
+                        <div class="course-details" id="courseDetails"></div>
+                </div>
+        
+        </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
